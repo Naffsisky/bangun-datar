@@ -18,8 +18,12 @@ public class Main {
      */
     public static void main(String[] args) {
         // declaration
-        BangunDatar rumus = new BangunDatar();
+        Square square = new Square();
+        Rectangle rec = new Rectangle();
+        Circle circ = new Circle();
+        Elipse el = new Elipse();
         Scanner input = new Scanner(System.in);
+        
         // input
         System.out.println("--- MENU ---");
         System.out.println("1. Square");
@@ -30,32 +34,39 @@ public class Main {
         int pilihan = input.nextInt();
         if(pilihan == 1){
             System.out.print("Masukan sisi: ");
-            rumus.sisi = input.nextInt();
-            rumus.squareLuas();
-            rumus.squareKeliling();
-            System.out.println("Luas: " + rumus.squareLuas());
-            System.out.println("Keliling: " + rumus.squareKeliling());
+            square.sisi = input.nextInt();
+            square.Luas();
+            square.Keliling();
+            System.out.println("Luas: " + square.Luas());
+            System.out.println("Keliling: " + square.Keliling());
         }
         else if(pilihan == 2){
             System.out.print("Masukan panjang: ");
-            rumus.panjang = input.nextInt();
+            rec.panjang = input.nextInt();
             System.out.print("Masukan lebar: ");
-            rumus.lebar = input.nextInt();
-            rumus.rectangleLuas();
-            rumus.rectangleKeliling();
-            System.out.println("Luas: " + rumus.rectangleLuas());
-            System.out.println("Keliling: " + rumus.rectangleKeliling());
+            rec.lebar = input.nextInt();
+            rec.Luas();
+            rec.Keliling();
+            System.out.println("Luas: " + rec.Luas());
+            System.out.println("Keliling: " + rec.Keliling());
         }
         else if(pilihan == 3){
             System.out.print("Masukan radius: ");
-            rumus.radius = input.nextInt();
-            rumus.circleLuas();
-            rumus.circleKeliling();
-            System.out.println("Luas: " + rumus.circleLuas());
-            System.out.println("Keliling: " + rumus.circleKeliling());
+            circ.radius = input.nextInt();
+            circ.Luas();
+            circ.Keliling();
+            System.out.println("Luas: " + circ.Luas());
+            System.out.println("Keliling: " + circ.Keliling());
         }
         else if(pilihan == 4){
-            
+            System.out.print("Masukan sumbu a: ");
+            el.a = input.nextInt();
+            System.out.print("Masukan sumbu b: ");
+            el.b = input.nextInt();
+            el.Luas();
+            el.Keliling();
+            System.out.println("Luas: " + el.Luas());
+            System.out.println("Keliling: " + el.Keliling());
         }
         else{
             System.out.println("Pilihan tidak ada!");
