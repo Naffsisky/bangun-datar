@@ -24,6 +24,9 @@ public class Main {
         Elipse el = new Elipse();
         Kubus getVolume = new Kubus();
         Balok kotak = new Balok();
+        Tabung bung = new Tabung();
+        Limas mas = new Limas();
+        Bola ball = new Bola();
         Scanner input = new Scanner(System.in);
         
         // input
@@ -34,6 +37,9 @@ public class Main {
         System.out.println("4. Elipse");
         System.out.println("5. Kubus");
         System.out.println("6. Balok");
+        System.out.println("7. Tabung");
+        System.out.println("8. Limas Segi Empat");
+        System.out.println("9. Bola");
         System.out.print("Masukan pilihan: ");
         int pilihan = input.nextInt();
         switch (pilihan) {
@@ -88,6 +94,30 @@ public class Main {
                 kotak.tinggi = input.nextInt();
                 kotak.ComputeAndSetVolume();
                 System.out.println("Volume: " + kotak.getVolume());
+            }
+            case 7 -> {
+                System.out.print("Masukan radius: ");
+                bung.radius = input.nextInt();
+                System.out.print("Masukan tinggi: ");
+                bung.tinggi = input.nextInt();
+                bung.phi = 3.14;
+                bung.hitungVolume();
+                System.out.println("Volume: " + bung.totalVolume());
+            }
+            case 8 -> {
+                System.out.print("Masukan luas alas: ");
+                mas.alas = input.nextInt();
+                System.out.print("Masukan tinggi: ");
+                mas.tinggi = input.nextInt();
+                mas.hitungVolume();
+                System.out.println("Volume: " + mas.totalVolume());
+            }
+            case 9 -> {
+                System.out.print("Masukan jari-jari: ");
+                ball.r = input.nextInt();
+                ball.phi = 3.14;
+                ball.hitungVolume();
+                System.out.println("Volume: " + ball.totalVolume());
             }
             default -> System.out.println("Pilihan tidak ada!");
         }

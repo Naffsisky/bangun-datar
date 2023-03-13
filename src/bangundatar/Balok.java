@@ -20,7 +20,7 @@ public class Balok {
         this.panjang = panjang;
     }
     public void setLebar(int lebar){
-        this.lebar = panjang;
+        this.lebar = lebar;
     }
     public void setTinggi(int tinggi){
         this.tinggi = tinggi;
